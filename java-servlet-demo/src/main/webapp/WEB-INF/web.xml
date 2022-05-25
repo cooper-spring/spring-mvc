@@ -5,6 +5,21 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+  <filter>
+    <filter-name>myFilter</filter-name>
+    <filter-class>com.cooper.MyFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>myFilter</filter-name>
+<!--    <servlet-name>hello</servlet-name>-->
+    <url-pattern>/hello</url-pattern>
+  </filter-mapping>
+
+  <listener>
+    <listener-class>com.cooper.MyListener</listener-class>
+  </listener>
+
   <servlet>
     <servlet-name>hello</servlet-name>
     <servlet-class>com.cooper.HelloServlet</servlet-class>
@@ -14,4 +29,5 @@
     <servlet-name>hello</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
+
 </web-app>
